@@ -1,5 +1,6 @@
 import express from "express";
-import { connectDB } from "./config";
+import { connectDB, defaultConfig } from "./config";
+import { createUrlRoute, resolveUrlRoute } from "./routes";
 
 const app = express();
 
@@ -7,6 +8,9 @@ connectDB();
 
 app.use(express.json());
 
-const PORT = 6000;
+app.use("/", resolveUrlRoute);
+app.use("/api/url", createUrlRoute);
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(defaultConfig.port, () =>
+  console.log(`Server running on port ${defaultConfig.port}`)
+);
