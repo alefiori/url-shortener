@@ -419,6 +419,13 @@
     "@types/mime" "^1"
     "@types/node" "*"
 
+"@types/tap@^15.0.5":
+  version "15.0.5"
+  resolved "https://registry.yarnpkg.com/@types/tap/-/tap-15.0.5.tgz#8b4a2552e6ec40563452317739c9e028bdc03792"
+  integrity sha512-MaP+EgZNFAGRvVjHWv8ldrLvYBn4PnmAlzY7IL3/RPAPkOXdggTSTgLFONbnTpdQTe8+ixYGAySKAm9ESlZm1A==
+  dependencies:
+    "@types/node" "*"
+
 "@types/webidl-conversions@*":
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/@types/webidl-conversions/-/webidl-conversions-6.1.1.tgz#e33bc8ea812a01f63f90481c666334844b12a09e"
@@ -2063,6 +2070,11 @@ ms@^2.1.1, ms@^2.1.2:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
+
+nanoid@^3.1.30:
+  version "3.1.30"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
+  integrity sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==
 
 negotiator@0.6.2:
   version "0.6.2"
