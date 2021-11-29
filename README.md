@@ -2,8 +2,14 @@
 
 ## Using
 
-* [Express](http://expressjs.com/)
-* [MongoDB](https://www.mongodb.com/)
+* [express](http://expressjs.com/)
+* [mongoDB](https://www.mongodb.com/)
+* [mongoose](https://mongoosejs.com/)
+* [typescript](https://www.typescriptlang.org/)
+* [nanoid](https://github.com/ai/nanoid)
+* [nodemon](https://nodemon.io/)
+* [tap](https://node-tap.org/)
+* [ts-node](https://typestrong.org/ts-node/)
 
 ## Configuration
 
