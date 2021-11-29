@@ -4,8 +4,12 @@ import { nanoid } from "nanoid";
 import { isURL } from "../utils";
 import { defaultConfig } from "../config";
 
+type CreateUrlRequestBody = {
+  longUrl: string;
+};
+
 export const createUrlRoute = Router().post("/shorten", async (req, res) => {
-  const { longUrl } = req.body;
+  const { longUrl }: CreateUrlRequestBody = req.body;
 
   if (!isURL(defaultConfig.baseUrl)) {
     return res.status(401).json("Invalid base url");
@@ -15,23 +19,23 @@ export const createUrlRoute = Router().post("/shorten", async (req, res) => {
 
   if (isURL(longUrl)) {
     try {
-      let url = await model.findOne({ longUrl });
+      const url = await model.findOne({ longUrl });
 
-      if (url) {
-        res.json(url);
+      if (!!url) {
+        res.json(url.shortUrl);
       } else {
         const shortUrl = defaultConfig.baseUrl + "/" + urlCode;
 
-        url = new model({
+        const responseUrl = new model({
           longUrl,
           shortUrl,
           urlCode,
           date: new Date(),
         });
 
-        await url.save();
+        await responseUrl.save();
 
-        res.json(url);
+        res.json(responseUrl.shortUrl);
       }
     } catch (err) {
       console.error(err);

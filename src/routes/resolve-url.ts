@@ -3,7 +3,8 @@ import { model } from "../models";
 
 export const resolveUrlRoute = Router().get("/:code", async (req, res) => {
   try {
-    const url = await model.findOne({ urlCode: req.params.code });
+    const urlCode: string = req.params.code;
+    const url = await model.findOne({ urlCode });
 
     if (url) {
       return res.redirect(url.longUrl);
